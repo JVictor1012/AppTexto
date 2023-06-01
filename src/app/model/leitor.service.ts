@@ -8,13 +8,13 @@ export class LeitorService {
 
   constructor() { }
 
-  async letTexto(txt: string, taxa: number = 1.0, tom: number = 1.0, volume: number = 5.0){
+  async letTexto(txt: string, taxa: number = 1.0, tom: number = 1.0){
     await TextToSpeech.speak({
       text: txt,
       lang: 'pt-BR',
       rate: taxa,
       pitch: tom,
-      volume: volume,
+      volume: 1.0,
       category: 'ambient',
     });
   }

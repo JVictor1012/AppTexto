@@ -19,9 +19,8 @@ export class HomePage {
   constructor(private service: LeitorService, fb: FormBuilder) {
     this.formText = fb.group({
       texto:['', Validators.required],
-      taxa:[],
-      tom:[],
-      volume:[]
+      taxa:[1],
+      tom:[1]
     
     })
   }
@@ -29,11 +28,9 @@ export class HomePage {
   ler(){
     this.service.letTexto(this.formText.get('texto')?.value, 
     this.formText.get('taxa')?.value,
-    this.formText.get('tom')?.value,
-    this.formText.get('volume')?.value)
+    this.formText.get('tom')?.value)
     console.log(this.formText.get('taxa')?.value,
-    this.formText.get('tom')?.value,
-    this.formText.get('volume')?.value)
+    this.formText.get('tom')?.value)
   }
 
 }
