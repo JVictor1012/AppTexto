@@ -19,7 +19,7 @@ export class HomePage {
   constructor(private service: LeitorService, fb: FormBuilder) {
     this.formText = fb.group({
       texto:['', Validators.required],
-      taxa:[1],
+      taxa:[0],
       tom:[1]
     
     })

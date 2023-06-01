@@ -21,7 +21,7 @@
       <ion-icon name="book-outline"></ion-icon>
     </ion-button>
 
-    <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter" formControlName="taxa">
+    <ion-range aria-label="Range with pin" [pin]="true" min="0.0" max="10.0" [pinFormatter]="pinFormatter" formControlName="taxa">
       <div slot="label">Taxa:</div>
     </ion-range>
     <ion-range aria-label="Range with pin" min="1" max="2" [pin]="true" [pinFormatter]="pinFormatter" formControlName="tom">
