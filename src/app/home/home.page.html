@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Leitor de Texto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Leitor de Texto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="formText">
+
+    <ion-textarea formControlName="texto" label="Texto" [autoGrow]="true" color="primary" labelPlacement="floating" fill="solid" placeholder="Insira seu texto" mode="md"></ion-textarea>
+    <ion-button (click)="ler()" [disabled]="formText.invalid">
+      Ler texto
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-button>
+
+    <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter" formControlName="taxa">
+      <div slot="label">Taxa:</div>
+    </ion-range>
+    <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter" formControlName="tom">
+      <div slot="label">Tom:</div>
+    </ion-range>
+    <ion-range aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter" formControlName="volume">
+      <div slot="label">Volume:</div>
+    </ion-range>
+    
+
+
+  </form>
+  <div id="container">
+    
+  </div>
+</ion-content>
